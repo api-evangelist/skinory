@@ -1,0 +1,6 @@
+Contact: mailto:info@skinory.io
+Contact: https://skinory.io/en/about
+Expires: 2027-07-25T00:00:00Z
+Preferred-Languages: en, ru
+Canonical: https://skinory.io/.well-known/security.txt
+Policy: https://skinory.io/en/about

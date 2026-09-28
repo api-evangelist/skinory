@@ -1,0 +1,96 @@
+openapi: 3.2.0
+info:
+  title: Skinory Inventories API
+  version: 1.0.0
+  summary: Read-only CS2 skin prices, Steam inventory appraisal, pro teams and players
+  description: Public read-only API of skinory.io. Prices are the best buy-now offer aggregated across market feeds (Skinport, Market.CSGO, DMarket, CSFloat, Waxpeer, White.Market, CSBoard) and the Steam Community Market, in USD, refreshed roughly hourly. The site does not sell items. Item pages live at the url fields of every response.
+  termsOfService: https://skinory.io/privacy
+  contact:
+    name: Skinory
+    url: https://skinory.io/ru/about
+  license:
+    name: CC BY-SA 4.0 for the teams and players data, attribution with a link to Skinory is required
+    url: https://creativecommons.org/licenses/by-sa/4.0/
+servers:
+- url: https://skinory.io
+security:
+- {}
+- bearerKey: []
+- headerKey: []
+tags:
+- name: Inventories
+paths:
+  /api/v1/inventories:
+    get:
+      operationId: batchInventories
+      summary: Stored appraisals of up to 50 Steam inventories in one call (200 with an API…
+      description: Reads only the stored appraisals, never calls Steam, so it answers instantly. Accepts SteamID64s and /profiles/ URLs only. Each item carries a status; unknown profiles have never been appraised and need a call to /api/v1/inventory (the appraise field). Values are as of each checkedAt. One call counts once against the hourly appraisal limit of the address or of the API key.
+      parameters:
+      - name: steam
+        in: query
+        required: true
+        description: Up to 50 (200 with an API key) comma-separated 17-digit SteamID64s or /profiles/ URLs
+      responses:
+        '200':
+          description: Batch result
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+                  properties:
+                    steamId:
+                      type: string
+                    profileUrl:
+                      type: string
+                    name:
+                      type: string
+                    avatar:
+                      type: string
+                    level:
+                      type:
+                      - integer
+                      - 'null'
+                    currency:
+                      type: string
+                      const: USD
+                    value:
+                      type: number
+                    items:
+                      type: integer
+                    priced:
+                      type: integer
+                    checkedAt:
+                      type: string
+                      format: date-time
+                    stale:
+                      type: boolean
+                    topItems:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          price:
+                            type: number
+                          count:
+                            type: integer
+                          image:
+                            type: string
+                          url:
+                            type: string
+      tags:
+      - Inventories
+components:
+  securitySchemes:
+    bearerKey:
+      type: http
+      scheme: bearer
+      description: 'API key in Authorization: Bearer <key>. Optional; without a key the request is anonymous and keeps the per-address limits. Create a key at https://skinory.io/en/profile after signing in through Steam (the account has to be a day old, up to 3 keys per account). A key has its own limits instead of the address ones: 600 requests per minute, 300 appraisals per hour, 30 lookups per minute of profiles never appraised before, 200 profiles per /api/v1/inventories call and no per-address cooldown. A malformed, unknown or revoked key is refused with 401, a key of a banned account with 403. Keyed responses carry X-RateLimit-Limit, X-RateLimit-Remaining and X-RateLimit-Reset (seconds until the minute window resets).'
+    headerKey:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+      description: 'API key in the X-Api-Key header. Optional; without a key the request is anonymous and keeps the per-address limits. Create a key at https://skinory.io/en/profile after signing in through Steam (the account has to be a day old, up to 3 keys per account). A key has its own limits instead of the address ones: 600 requests per minute, 300 appraisals per hour, 30 lookups per minute of profiles never appraised before, 200 profiles per /api/v1/inventories call and no per-address cooldown. A malformed, unknown or revoked key is refused with 401, a key of a banned account with 403. Keyed responses carry X-RateLimit-Limit, X-RateLimit-Remaining and X-RateLimit-Reset (seconds until the minute window resets).'

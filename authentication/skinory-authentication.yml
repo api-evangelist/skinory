@@ -1,0 +1,31 @@
+generated: '2026-09-28'
+method: derived
+source: openapi/skinory-openapi.json
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - header
+schemes:
+- name: bearerKey
+  type: http
+  scheme: bearer
+  description: 'API key in Authorization: Bearer <key>. Optional; without a key the request
+    is anonymous and keeps the per-address limits. Create a key at https://skinory.io/en/profile
+    after signing in through Steam (the account has to be a day old, up to 3 keys per account).
+    A key has its own limits instead of the address ones: 600 requests per minute, 300 appraisals
+    per hour, 30 lookups per minute of profiles n'
+  sources:
+  - openapi/skinory-openapi.json
+- name: headerKey
+  type: apiKey
+  in: header
+  parameter: X-Api-Key
+  description: 'API key in the X-Api-Key header. Optional; without a key the request is anonymous
+    and keeps the per-address limits. Create a key at https://skinory.io/en/profile after signing
+    in through Steam (the account has to be a day old, up to 3 keys per account). A key has
+    its own limits instead of the address ones: 600 requests per minute, 300 appraisals per
+    hour, 30 lookups per minute of profiles never ap'
+  sources:
+  - openapi/skinory-openapi.json

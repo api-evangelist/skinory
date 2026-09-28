@@ -1,0 +1,228 @@
+# Skinory
+
+> Skinory (https://skinory.io) is an independent Counter-Strike 2 and CS:GO skins reference in 22 languages: live best-offer prices from markets and Steam, every collection and case, the weekly drop pool, Steam inventory valuation, case-site RTP checks, trade-up and pattern tools, guides, community servers and professional player data. It does not sell items. "Skinory" here means Counter-Strike 2 weapon skins (in-game cosmetic items); the site is unrelated to skincare, cosmetics or dermatology.
+
+The site is an independent reference catalog. It does not sell items. Market prices change and are not guaranteed execution prices. A missing price means no usable quote is available, not that the item is free. StatTrak, Souvenir and wear variants are separate items.
+
+## Catalog
+
+- [English home](https://skinory.io/en): Collections and site navigation.
+- [Russian home](https://skinory.io/ru): Russian catalog and guides.
+- [Hebrew catalog — עברית](https://skinory.io/he): Hebrew catalog and tools.
+- [Arabic catalog — العربية](https://skinory.io/ar): Arabic catalog and translated articles.
+- [Search](https://skinory.io/en/search?q=AK-47): Search item, weapon and collection names.
+- [Cases](https://skinory.io/en/cases): Cases and their contents.
+- [Stickers](https://skinory.io/en/stickers): Stickers and finishes.
+- [Music kits](https://skinory.io/en/music-kits): Music kits and market prices.
+- [Weapon categories](https://skinory.io/en/types/rifles): Weapon catalogs link to individual weapon guides and skin lists.
+- [CS2 maps](https://skinory.io/en/maps): one page per map with its collections, every skin with live prices, the value of the full set and its souvenir packages (https://skinory.io/en/maps/<map-slug>, for example https://skinory.io/en/maps/dust2).
+- [Glossary](https://skinory.io/en/glossary): CS2 skin terms (float, paint seed, StatTrak™, Souvenir, rarities).
+- [Guides](https://skinory.io/en/guides): CS2 reference articles.
+- [Chicken Eggs and pets](https://skinory.io/en/guides/chicken-eggs-cs2): What is known about egg odds, hatching, growth stages, 3 breeds and 34 colours, Chicken Feed and HatchBook, with sources and verification dates.
+
+## Tools
+
+- [Sticker craft builder](https://skinory.io/en/stickers/crafts/builder): a skin, up to five stickers and a charm with live component prices, an estimated premium, 3D inspect with sticker placement and a share link; ready-made crafts at https://skinory.io/en/stickers/crafts.
+- [Floats and patterns](https://skinory.io/en/patterns): wear zones, float ranges, a float checker and pattern tables of famous seeds (Blue Gem, Fire & Ice, Doppler phases), one page per family such as https://skinory.io/en/patterns/case-hardened.
+- [Market cap](https://skinory.io/en/market-cap-cs2): capitalization of the CS2 skin market and listing volume, its history and index, top gainers and losers.
+- [New items](https://skinory.io/en/new): items added by recent game updates with prices and rarities.
+- [Site news](https://skinory.io/en/news): a dated log of catalog, drop pool and guide changes with an Atom feed per language (https://skinory.io/news-en.xml).
+- [Compare two skins](https://skinory.io/en/compare/ak-47-redline-vs-ak-47-vulcan): prices by wear, rarity, float range and StatTrak side by side; https://skinory.io/en/compare/<slug-a>-vs-<slug-b> exists for popular pairs of the same weapon (listed in the sitemap).
+- [Skins by colour](https://skinory.io/en/colors): pick a shade and compare prices across all skins.
+- [Servers](https://skinory.io/en/servers): live community server browser with players online, filters by mode, map and country.
+- [Pro teams](https://skinory.io/en/teams): active teams by the Valve Regional Standings with rosters, coaches, team stickers and autographs at live prices.
+- [Case simulator and RTP check](https://skinory.io/en/simulator): unbox cases with the official Valve odds or a chosen RTP at real prices; its section https://skinory.io/en/simulator#rtp-check reads the odds and RTP of a case on a third-party case-opening site (see RTP checker coverage).
+- [Inventory value](https://skinory.io/en/steam-inventory): free valuation of a public Steam inventory with a leaderboard; open https://skinory.io/en/steam-inventory?steam=<profile URL, SteamID64 or custom URL name> to get the result rendered in the HTML without JavaScript.
+- [Trade-up finder](https://skinory.io/en/tradeups): profitable trade-up contracts at live prices, one page per rarity step such as https://skinory.io/en/tradeups/restricted-to-classified, with the profit range by input float, the chance of profit and the odds of every outcome.
+- [Charm templates](https://skinory.io/en/keychains/templates): what the template number (0–100000) changes on each charm and where its rare zone sits.
+- [Drop pool history](https://skinory.io/en/droppool/history): when cases entered and left the drop pool and how their prices reacted.
+- [Methodology](https://skinory.io/en/methodology): where prices come from, how fresh each feed is, and how prices, trends, market cap and drop pool data are computed.
+
+## Collections and item URLs
+
+Slugs are lowercase words joined by hyphens, not display names; find them with search or the price API.
+
+- Collection: https://skinory.io/en/collections/<slug>, for example [The Dust 2 Collection](https://skinory.io/en/collections/the-dust-2-collection) — every skin of the collection with rarity, float range and prices.
+- Item: https://skinory.io/en/items/<slug>, for example [AK-47 | Redline](https://skinory.io/en/items/ak-47-redline) — prices across markets, float range, price history and notable patterns.
+- Wear: https://skinory.io/en/items/<slug>/<wear> with wear = factory-new, minimal-wear, field-tested, well-worn, battle-scarred, for example https://skinory.io/en/items/ak-47-redline/field-tested.
+- Variant: https://skinory.io/en/items/<slug>/stattrak and https://skinory.io/en/items/<slug>/souvenir.
+- Only the wears and variants an item really has exist; the others return 404. Vanilla knives have no wear pages. The sitemap index is the complete list of URLs.
+- Localized names: under /ru, /pl, /de, /nl, /da, /es, /pt, /fr, /tr, /zh, /ja, /ko, and /vi, item, case, collection, sticker, agent, charm, graffiti and music kit pages show the official in-game name in that language next to the English market name (also in the page title and as the Product alternateName), and search accepts those names.
+
+## Weekly drop pool
+
+Live snapshot (updated 2026-09-26, source: skinsniper). Once a week a Prime player who ranks up for the first time that week gets a Weekly Care Package: four rewards are offered and two are picked, drawn from the active drop pool. The pool resets every Tuesday at 17:00 Pacific time (Wednesday 00:00 UTC in summer, 01:00 UTC in winter). Valve publishes no drop odds; percentages below, when present, are community estimates of each item's share of the whole weekly drop, not official odds.
+
+Active cases:
+- Dreams & Nightmares Case (in the pool since 2023-09-27)
+- Revolution Case (in the pool since 2023-09-27)
+- Kilowatt Case (in the pool since 2024-02-07)
+- Sealed Genesis Terminal (in the pool since 2025-09-16)
+- Sealed Dead Hand Terminal (in the pool since 2026-03-11)
+
+Active collections (single weapon skins drop from these):
+- [The Achroma Collection](https://skinory.io/en/collections/the-achroma-collection) (in the pool since 2026-01-21)
+- [The Harlequin Collection](https://skinory.io/en/collections/the-harlequin-collection) (in the pool since 2026-01-21)
+- [The Ascent Collection](https://skinory.io/en/collections/the-ascent-collection) (in the pool since 2025-03-31)
+- [The Boreal Collection](https://skinory.io/en/collections/the-boreal-collection) (in the pool since 2025-03-31)
+- [The Radiant Collection](https://skinory.io/en/collections/the-radiant-collection) (in the pool since 2025-03-31)
+
+Also in the Weekly Care Package:
+- Chicken Egg (in the pool since 2026-09-22)
+- Chicken Feed (in the pool since 2026-09-22)
+Eggs, hatching and Chicken Feed: [Chicken Eggs guide](https://skinory.io/en/guides/chicken-eggs-cs2).
+
+- [Drop pool page](https://skinory.io/en/droppool): the same snapshot with the reset timer, discontinued cases and the most expensive items that can drop right now; every language has it at /<lang>/droppool.
+- [Drop pool history](https://skinory.io/en/droppool/history): when cases entered and left the pool, with price reactions.
+
+## Newest catalog additions
+
+Items added to the catalog, newest batch first (the day the game data first listed them):
+- 2026-09-23, 2 items: Music Kit | Starjunk 95, Industrial Sunset Memories; StatTrak™ Music Kit | Starjunk 95, Industrial Sunset Memories
+
+Weapons that got their first finishes most recently (the date of the first collection or case with a skin for them, not the weapon's release in the game):
+- [Kukri Knife](https://skinory.io/en/weapons/kukri-knife): first finishes 2024-02-07
+- [Zeus x27](https://skinory.io/en/weapons/zeus-x27): first finishes 2024-02-07
+- [Nomad Knife](https://skinory.io/en/weapons/nomad-knife): first finishes 2019-11-19
+
+Full list: [new items](https://skinory.io/en/new); dated changes to items, the drop pool and guides: [site news](https://skinory.io/en/news) with an Atom feed at https://skinory.io/news-en.xml.
+
+## Agent recipes
+
+Read-only JSON, no key needed, USD prices, CORS open. Every /api path also shares a limit of 120 requests per minute per address, 600 for known AI assistants (plain-text 429 with Retry-After in seconds). See Throughput and limits below before scanning many profiles.
+
+### Value a public Steam inventory
+
+GET https://skinory.io/api/v1/inventory?steam=<Steam profile URL | SteamID64 | custom URL name>
+
+Example: https://skinory.io/api/v1/inventory?steam=https://steamcommunity.com/id/anomaly
+
+A 200 response carries steamId, profileUrl, name, avatar, level, currency ("USD"), value (total of the priced items), items, priced (items that have a market price), checkedAt (ISO time of the appraisal), stale (true when a stored appraisal is returned because a fresh one cannot be made right now), topItems[] with name, price, count, image and url, publicPage (only when the owner shared the inventory), pricing and source.
+
+Errors are JSON {"error": "<code>", "message": "<text>"}:
+- 400 input: the steam parameter is missing or malformed.
+- 404 notfound: no such profile, or the inventory is empty.
+- 403 private: the inventory is private in Steam privacy settings; only the owner can change that, do not retry.
+- 403 hidden: the owner hid the inventory on this site, do not retry.
+- 503 busy: a fresh appraisal is being computed; retry once after Retry-After seconds. Known AI assistants are first held for up to 25 seconds while the queued appraisal completes and get the fresh 200 when it does.
+- 503 upstream: Steam is temporarily refusing requests from the server; retry after Retry-After seconds (it can be many minutes) or report that the value is unavailable.
+- 429 busy: a short per-address cooldown when switching between profiles; retry after Retry-After seconds.
+- 429 limit: 60 appraisals per hour per address (600 per hour and no per-address cooldown for known AI assistants such as ChatGPT-User, OAI-SearchBot, Claude-User, PerplexityBot, Google-Extended and Grok, detected by User-Agent); Retry-After is the number of seconds until the hourly window resets. Answers served from a stored appraisal (stale: true) do not count.
+
+### Read many inventories at once
+
+GET https://skinory.io/api/v1/inventories?steam=<SteamID64 or steamcommunity.com/profiles/ URL>,<...> (up to 50)
+
+Example: https://skinory.io/api/v1/inventories?steam=76561198132414056,76561197960287930
+
+Answers instantly from the stored appraisals and never calls Steam. The response is {count, currency, source, items[]}, one item per profile in request order with steamId, status, checkedAt, appraise (the /api/v1/inventory URL for a live value) and inventory (the stored appraisal in the /api/v1/inventory shape, stale: true). status is cached (inventory is filled, values as of checkedAt), unknown (never appraised: call appraise), hidden (the owner opted out), private or notfound (the last background check found the inventory private or missing). Custom URL names are not resolved here: 400 input for anything but SteamID64s and /profiles/ URLs. One call counts once against the hourly appraisal limit.
+
+### Read the exact float of one item
+
+GET https://skinory.io/api/v1/float?url=<URL-encoded CS2 inspect link>
+
+Classic links (S<SteamID64>A<asset>D<number> from an inventory, M<listing>A<asset>D<number> from a market listing) are read from the Steam Game Coordinator by the site's bot accounts: about one lookup per second per bot for all callers together, 10 lookups per minute per address (30 per API key), stored answers are reused for 30 days and not counted, nor are repeated calls while a lookup is in progress. Current links that carry the item data are decoded without Steam. lang works as on the other endpoints. A 200 response has source (gc or link), cached, fetchedAt (when the Game Coordinator was asked, null for data from the link; statTrakCount may lag by up to 30 days), float (exact), floatTruncated (4 decimals, truncated), wear, seed, defIndex, paintIndex, item {name, url, image, phase, minFloat, maxFloat} (null when not in the catalog), stattrak, souvenir, statTrakCount, customName, verdict {family, notable, tier, bluePercent, fadePercent, url} (pattern verdict for seed-dependent finishes), stickers[] with names, wear and page links and keychains[] with names, charm pattern number (seed) and page links. 202 {status: "queued"} means the Game Coordinator needs longer than 8 seconds: retry after Retry-After. 503 unavailable when the server has no Game Coordinator bots (classic links only), 503 busy when no bot is online or too many lookups are waiting, 504 timeout when the item did not answer (it may have moved).
+
+### Look up item prices
+
+GET https://skinory.io/api/v1/price?q=<item name>
+
+Example: [price search](https://skinory.io/api/v1/price?q=AK-47) returns {query, currency: "USD", pricedAt, stale, pricing, results[]}. pricedAt is the ISO time of the last price feed refresh (null before the first load) and stale is true when the feeds are older than 24 hours, so quote the price as of pricedAt and warn when stale. Each result has type (skin, sticker, case, agent, keychain, graffiti, music, key, collection or weapon), name, url (the item page), image, rarity, collection, price (the cheapest wear; null means no listing right now) and source (the market id holding that best offer, for example skinport, csfloat or steam; null when unknown); skins add wears[] of {wear, price}, plus stattrak[] and souvenir[] when those variants exist. Up to 8 matches; 400 input when q is shorter than two characters.
+
+### Price history
+
+GET https://skinory.io/api/v1/price/history?q=<item name>&days=30|90|365 (default 90)
+
+Example: [AK-47 Redline, 30 days](https://skinory.io/api/v1/price/history?q=AK-47%20Redline&days=30) resolves q like the price search and takes the first single item (skin, case, sticker, agent, charm, graffiti, music kit or key). It returns {query, type, name, url, image, reference, steamWear, currency, pricedAt, stale, days, pricing, points[]} with one point per UTC day, oldest first: {date, steam, best}. steam is the Steam Community Market line of the item page chart (for skins the Factory New and Minimal Wear weighted index, or the single wear named in steamWear); best is the daily median of the best buy-now offer across market feeds for reference, the Factory New or first wear of a skin; null means that source has no data for the day. 404 notfound when no single item matches. Cached for 10 minutes.
+
+### Offers per market
+
+GET https://skinory.io/api/v1/offers?name=<market_hash_name>
+
+Example: [StatTrak™ AK-47 Redline, Field-Tested](https://skinory.io/api/v1/offers?name=StatTrak%E2%84%A2%20AK-47%20%7C%20Redline%20%28Field-Tested%29) takes the exact Steam market_hash_name of one item and returns {name, type, url, currency, pricedAt, stale, pricing, offers[]}: one offer per market feed, cheapest first, {id, name, price, stock, url} with the lowest buy-now listing (null when the market has none), the listing count and a link to the item on that market. The Steam Community Market is not included. 404 notfound when no item has that name.
+
+The inventory, batch, price, price history and offers endpoints accept lang (for example &lang=de) for the language prefix of the page links in url fields; without it the Accept-Language header decides, then English.
+
+## Throughput and limits
+
+- Fresh Steam inventory fetches are serialised server-wide: about one Steam request every 4 seconds for all visitors together, and a large inventory needs several. 15 profiles that were never appraised therefore take about a minute; send them one after another, not in a burst.
+- Stored appraisals answer instantly. Check https://skinory.io/api/v1/inventories first (up to 50 profiles per call, no Steam request) and appraise only the unknown ones with /api/v1/inventory. When a fresh appraisal cannot be made, /api/v1/inventory returns the stored one with stale: true.
+- Per address: 120 API requests per minute and 60 appraisals per hour, with a short cooldown when switching between profiles. Known AI assistants, whose User-Agent contains one of GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-User, Claude-SearchBot, PerplexityBot, Perplexity-User, Google-Extended, GoogleOther, Google-CloudVertexBot, Gemini, xAI-Grok, GrokBot, DuckAssistBot, Applebot, Meta-ExternalAgent, Amazonbot, YouBot, MistralAI, Cohere-AI, get 600 requests per minute, 600 appraisals per hour and no cooldown.
+- Profiles that were never appraised: all known AI assistants together share 8 such lookups per minute; beyond that /api/v1/inventory answers 429 busy with Retry-After. Stored profiles do not use this budget.
+- Long-poll for assistants: when a fresh fetch cannot start right now (the Steam queue is saturated or Steam asked the server to back off) and no stored appraisal exists, /api/v1/inventory waits up to 25 seconds for the queued fresh appraisal and returns it; otherwise it answers 503 busy with Retry-After. It never waits while Steam refuses the server (503 upstream).
+- The inventory leaderboard and the batch endpoint show each profile as of its checkedAt, so a value there can differ from a live appraisal; call /api/v1/inventory for a live number.
+- Prices refresh roughly hourly: /api/v1/price for the current price, /api/v1/price/history for daily points.
+
+## RTP checker coverage
+
+The [case odds and RTP checker](https://skinory.io/en/simulator) takes a case page link (https://skinory.io/en/simulator?url=<case link>, rendered on the server, 20 checks per minute per address) and reads the odds and prices the site publishes. It is not universal:
+- Parsed on the server from the site's JSON API: hellcase.com, ggdrop.com, skin.club, casedrop.eu, datdrop.com, clash.gg, csgoroll.com, g4skins.com, cs2case.gg, jabka.to, skinrave.gg, ggskins.com, ggcase.com, csgowin.com, csgocasino.gg, csgo500.com, cscase.com, casehunt.red, tastystrike.cc, skinbox.gg, freeru.cc, daddyskins.com, petuh.me, musor.best, hotpizza.gg.
+- Parsed on the server from the case page HTML: skinhouse.gg, magic-drop.win, key-drop.com, casehug.com.
+- Meteor sites that send odds over their DDP websocket (forcedrop and similar): the server tries the websocket itself; when that fails only a visitor's browser on the checker page can relay the data, so a plain HTTP client gets an error.
+- Any other site: best effort from JSON embedded in the page, common API paths or item names alone (then without odds); pages behind bot protection fall back to an Internet Archive copy.
+- Not supported: sites that deliver odds only over their own websocket protocol, for example CSGO.net.
+
+## Public read-only API
+
+- [API for developers](https://skinory.io/en/developers): Human-readable overview with the endpoint table, limits, licensing and how to cite.
+- [OpenAPI 3.1](https://skinory.io/api/openapi.json): Request parameters, response schemas and errors; the same document is served at https://skinory.io/.well-known/openapi.json.
+- [Price search example](https://skinory.io/api/v1/price?q=AK-47): Prices in USD, including wear variants when available.
+- [Price history example](https://skinory.io/api/v1/price/history?q=AK-47%20Redline&days=90): Daily Steam and best-offer prices.
+- [Stored inventory values example](https://skinory.io/api/v1/inventories?steam=76561198132414056): Up to 50 profiles per call, no Steam request.
+- API keys are optional: every endpoint answers without one. After signing in through Steam, create up to 3 keys at https://skinory.io/<lang>/profile (for example https://skinory.io/en/profile; the account has to be a day old) and send one as Authorization: Bearer <key> or X-Api-Key: <key>. A key gets its own limits instead of the address ones: 600 requests per minute, 300 appraisals per hour without the cooldown, 30 lookups per minute of never appraised profiles and up to 200 profiles per /api/v1/inventories call; keyed responses carry X-RateLimit-Limit, X-RateLimit-Remaining and X-RateLimit-Reset. A malformed, unknown or revoked key gets 401 unauthorized, never an anonymous answer.
+- [oEmbed](https://skinory.io/oembed?url=https%3A%2F%2Fskinory.io%2Fen%2Fitems%2Fak-47-redline&format=json): GET https://skinory.io/oembed?url=<item, case, collection or shared inventory page URL>&format=json (optional maxwidth, maxheight) returns an oEmbed 1.0 rich response with an iframe card, title and the page's OG image as thumbnail; the frame is 400×180 or smaller to fit maxwidth and maxheight, and 404 when they are below 260×130; item, case and collection pages advertise it with a link rel="alternate" type="application/json+oembed". 404 for other URLs, 501 for format=xml.
+- Embeddable cards: https://skinory.io/embed/item/<slug>, https://skinory.io/embed/case/<slug>, https://skinory.io/embed/collection/<slug> and https://skinory.io/embed/inventory/<SteamID64> (only for inventories their owner shared) are 400×180 HTML cards with the image, best price and its wear, 30-day sales of that wear (collections: the cheapest item) and a link to the full page; ?lang=<language> localises them, English by default. They may be framed by any site and are not indexed.
+- SVG badges: https://skinory.io/badge/item/<slug>.svg (name and cheapest price) and https://skinory.io/badge/inventory/<SteamID64>.svg (stored inventory value, a neutral dash when the inventory is not shared or the owner hides the amount). Item badges are cached for an hour, inventory badges for 10 minutes, so a value can stay visible that long after its owner unshares or hides it; for example ![AK-47 | Redline](https://skinory.io/badge/item/ak-47-redline.svg).
+- [Teams](https://skinory.io/api/v1/teams): GET https://skinory.io/api/v1/teams (optional ?region=europe|americas|asia), https://skinory.io/api/v1/teams/<slug> and https://skinory.io/api/v1/players/<slug>. Teams and players data is CC BY-SA 4.0; credit Skinory with a link, every response carries license, attribution and sources fields.
+- [Pro players with a public Steam profile](https://skinory.io/api/v1/players?steam=public&limit=20): GET https://skinory.io/api/v1/players?steam=public|verified&limit=<1-100> lists the players of the ranked teams, best team first, with steamId, steamVerified (true when the linked Steam profile name or real name matches the player, false when unconfirmed, null when not checked) and steamPersona; without steam every ranked player is listed.
+- [AI resource catalog](https://skinory.io/.well-known/ai-catalog.json): ARD capability manifest.
+- [Full text of the guides](https://skinory.io/llms-full.txt): every English text guide in Markdown in one file.
+
+Login and account changes require user interaction.
+
+## Guides
+
+- [CS2 pets and Chicken Eggs: odds, breeds, feed and care](https://skinory.io/en/guides/chicken-eggs-cs2): Chicken Eggs in CS2 drops: the odds, the two-pick cost, hatching after a week, 3 breeds and 34 chicken colours, Sunnyside feed and HatchBook. (languages: ru, en, ar; Markdown: https://skinory.io/en/guides/chicken-eggs-cs2.md)
+- [CS2 RUSH: how to play the new 3v3 mode](https://skinory.io/en/guides/rush-cs2): Learn how rounds and matches work in CS2 RUSH: three-player teams, tower control, castle capture and practical tips for your first game. September 22, 2026 update. (languages: ru, en; Markdown: https://skinory.io/en/guides/rush-cs2.md)
+- [Are CS2 case sites legit? How to check the odds on KeyDrop, Hellcase, CSGO.net and others](https://skinory.io/en/guides/case-sites-honesty): How to check a case site: where to find published odds, what RTP means, how provably fair differs from payout size, and how to compare KeyDrop, Hellcase, CSGO.net and Farmskins cases against market prices. The calculation table updates automatically. (languages: ru, en)
+- [Why CS2 cases go up in price: the drop pool, rotation and how case prices grow](https://skinory.io/en/guides/why-cases-rise): What drives the price of a CS2 case: how the drop pool and weekly drop work, what happens to the price when a case leaves rotation, why old cases cost hundreds of dollars and which cases may grow. Live prices and the current drop pool. (languages: ru, en, de, pl, pt)
+- [The CS2 drop pool: how the weekly drop, rotation and Care Package work](https://skinory.io/en/guides/weekly-drop-pool): How the CS2 drop pool works: the weekly Care Package, active and rare pools, collections, the Tuesday reset, Prime, case rotation and what it does to prices. (languages: ru, en, de, pl, pt)
+- [CS2 trade cooldown: what it is and how to remove it](https://skinory.io/en/guides/trade-cooldown): How long CS2 trade cooldowns last — 7, 15 and 30 days, where to find the exact unlock date, how to avoid a cooldown and why every paid removal offer is a scam. (languages: ru, en, de, pl, pt)
+- [CS2 trade-up contracts: rules, the float formula and real profit](https://skinory.io/en/guides/trade-up-contracts): How CS2 trade-up contracts work: 10 items of one rarity, collection-based odds, the normalised float formula, the 5-Covert knife contract, souvenirs in contracts and a live list of profitable trade-ups. (languages: ru, en, de, pl, pt)
+- [Most profitable CS2 contracts: live picks and how to use them](https://skinory.io/en/guides/most-profitable-contracts): Live CS2 contract picks with input cost, expected return, ROI and chance of profit. Learn how to open a preset in the builder and check actual market lots. (languages: ru, en)
+- [CS2 float, wear and patterns: how they work and what they change](https://skinory.io/en/guides/float-patterns): CS2 float and wear explained: FN 0–0.07, MW 0.07–0.15, FT 0.15–0.38, WW 0.38–0.45, BS 0.45–1, capped skin ranges, paint seed 0–1000, Case Hardened blue, Fade percentages, Doppler phases and how to check any copy. (languages: ru, en, de, pl, pt)
+- [Steam Market fees: what the market takes and what you actually get](https://skinory.io/en/guides/steam-fees): Steam Community Market fees explained: 5% Steam plus 10% CS2, a one-cent minimum on each, both computed from the seller amount. A two-way calculator, why the “you receive” field differs, wallet limits and a live market comparison. (languages: ru, en, de, pl, pt)
+- [How to sell CS2 skins safely: routes, payouts and scam patterns](https://skinory.io/en/guides/sell-safely): Where to sell CS2 skins and what actually lands in your pocket: the Steam Market, P2P markets, instant buyout. The 7-day trade protection, Valve’s own list of trade scams, a pre-trade checklist and what to do after a scam. (languages: ru, en, de, pl, pt)
+- [Souvenir and StatTrak in CS2: what they are, what they cost, how to check](https://skinory.io/en/guides/souvenir-stattrak): How StatTrak differs from souvenir quality: what the counter tracks, how the StatTrak Swap Tool works, why some skins have no StatTrak, where souvenir packages come from, what the Souvenir-O-Matic is, and a live StatTrak premium table. (languages: ru, en, de, pl, pt)
+
+## Languages and discovery
+
+Content is available under /ru, /pl, /en, /de, /nl, /da, /es, /pt, /fr, /tr, /mn, /zh, /ja, /ko, /vi, /id, /ms, /tl, /hi, /ar, /fa, /he; each page links its language versions with hreflang tags. Use the canonical URL and language alternatives from the page. Resource endpoints such as this file and the API do not use language prefixes.
+
+Text-only guides offer a public Markdown alternative through a text/markdown alternate link in the HTML and Link response header. It contains the same authored article, sources and FAQ without site navigation; it is available to all clients, not selected by user agent. The HTML article remains canonical. Guides with live tables and calculators use their HTML pages.
+
+- [Chicken Eggs guide in Markdown — English](https://skinory.io/en/guides/chicken-eggs-cs2.md)
+- [Гайд по яйцам в Markdown — русский](https://skinory.io/ru/guides/chicken-eggs-cs2.md)
+- [دليل البيض بصيغة Markdown — العربية](https://skinory.io/ar/guides/chicken-eggs-cs2.md)
+
+- [Sitemap](https://skinory.io/sitemap.xml): Index of public pages.
+- [Robots policy](https://skinory.io/robots.txt): Crawling rules.
+- [Top 500 skins as JSON Lines](https://skinory.io/llms-catalog.txt): 500 skins ranked by listed market value with slug, name, weapon, collection, rarity, minPriceUsd, pricedAt and url, one object per line after a license header line; refreshed hourly.
+
+WebMCP search and price lookup tools are registered in browsers that support the API. Public search forms include declarative tool annotations. Other browsers use the same normal forms and links.
+
+## Legal and licensing
+
+- [About](https://skinory.io/en/about): how the site works and where its data comes from.
+- [Privacy policy](https://skinory.io/en/privacy) and [cookie policy](https://skinory.io/en/cookies).
+- [security.txt](https://skinory.io/.well-known/security.txt): contact for security reports.
+
+Guides, editorial texts and the site's own derived data (drop pool estimates, case RTP figures, indices, daily medians, pattern tables and the llms-catalog.txt compilation) are licensed CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. Reuse requires attribution: the name Skinory and a link to the source page.
+
+Teams and players data (the teams pages, /api/v1/teams and /api/v1/players) is CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/, because it is derived from Liquipedia: credit Skinory with a link and share adaptations under the same licence.
+
+The item catalogue (names, images, rarities and collections from the game files via the CSGO-API dataset) and marketplace prices are third-party data. This site declares no licence for them; the terms of the original sources apply.
+
+## How to cite
+
+Cite a page as "Skinory — <page title>, <URL>, updated <date>", for example "Skinory — AK-47 | Redline, https://skinory.io/en/items/ak-47-redline, updated 2026-09-27". Use the canonical URL and the page's own update date when it shows one (dateModified in the structured data of guides), otherwise the date you read it. Give prices with their currency and time: they change.

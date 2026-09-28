@@ -1,0 +1,58 @@
+generated: '2026-09-28'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/skinory-openapi.json
+format: custom
+envelope:
+  media_type: application/json
+  schema: null
+coverage:
+  operations: 2
+  statuses_declared: 6
+problems:
+- status: 400
+  title: Bad Request
+  description: Missing steam parameter
+  operations: 1
+  media_types:
+  - application/json
+  schema: null
+- status: 401
+  title: Unauthorized
+  description: 'unauthorized: the Authorization or X-Api-Key header carries a malformed, unknown or revoked API
+    key; send no key header to be served anonymo'
+  operations: 1
+  media_types:
+  - application/json
+  schema: null
+- status: 403
+  title: Forbidden
+  description: private (Steam inventory is private) or hidden (owner opted out)
+  operations: 1
+  media_types:
+  - application/json
+  schema: null
+- status: 404
+  title: Not Found
+  description: Profile not found
+  operations: 1
+  media_types:
+  - application/json
+  schema: null
+- status: 429
+  title: Too Many Requests
+  description: Per-address cooldown or the hourly limit of 60 appraisals per address (600 and no cooldown for known
+    AI assistants by User-Agent, 300 per AP
+  operations: 1
+  media_types:
+  - application/json
+  schema: null
+- status: 503
+  title: Service Unavailable
+  description: busy (appraisal in progress) or upstream (Steam is temporarily refusing requests from the server);
+    retry after Retry-After seconds. Known AI
+  operations: 1
+  media_types:
+  - application/json
+  schema: null

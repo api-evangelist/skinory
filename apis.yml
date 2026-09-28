@@ -1,30 +1,112 @@
 aid: skinory
+
 name: Skinory (submitted as g2push)
-description: 'Skinory (submitted as g2push) is a company surfaced via the API Evangelist harvest backlog
-  (source: new-submission) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://skinory.io/og/en.png?brand=skinory-wordmark-12
+
+description: Skinory offers a free, public read‑only JSON API delivering real‑time CS2 and CS:GO skin price data, historical price trends, Steam
+  inventory valuation, and detailed statistics for professional teams and players. The service operates without authentication for basic limits,
+  supports optional API keys for higher quotas, and enforces open CORS for client‑side use. Comprehensive documentation, including endpoint details,
+  rate limits, and licensing information, is available at https://skinory.io/en/developers, with the full OpenAPI 3.1 specification provided at
+  /api/openapi.json.
+
 url: https://raw.githubusercontent.com/api-evangelist/skinory/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Gaming
+- Skins
+- CS2
+- CS:GO
+- API
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: AgenticAccess
+  url: agentic-access/skinory-agentic-access.yml
+- type: Spectral
+  url: rules/skinory-rules.yml
+- type: Security
+  url: https://skinory.io/en/about
+- type: ErrorCatalog
+  url: errors/skinory-problem-types.yml
+- type: Conformance
+  url: conformance/skinory-conformance.yml
+- type: Overlay
+  url: overlays/skinory-openapi-overlay.yaml
+- type: LLMsTxt
+  url: llms/skinory-llms.txt
+- type: SecurityTxt
+  url: well-known/skinory-security.txt
+- type: WellKnown
+  url: well-known/skinory-well-known.yml
+- type: Hosts
+  url: hosts/skinory-hosts.yml
+- type: Vendors
+  url: vendors/skinory-vendors.yml
+- type: Newsroom
+  url: https://skinory.io/en/news
+- type: Authentication
+  url: authentication/skinory-authentication.yml
+- type: VulnerabilityDisclosure
+  url: security/skinory-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/skinory-domain-security.yml
 - type: Website
   url: https://skinory.io/
+- type: PrivacyPolicy
+  url: https://skinory.io/en/privacy
 - type: Documentation
   url: https://skinory.io/en/developers
-x-submission-notes: 'CS2/CS:GO skins reference with a public read-only JSON API: live prices, price history,
-  Steam inventory valuation, pro teams; OpenAPI 3.1 at /api/openapi.json; CORS open. Submitted under the
-  name g2push; the product and domain are Skinory.'
+- type: GettingStarted
+  url: https://skinory.io/en/developers
+
+apis:
+- aid: skinory:skinory-inventories-api
+  name: Skinory (submitted as g2push) Inventories API
+  description: The Inventories API from Skinory (submitted as g2push) — 1 operation(s) for inventories.
+  humanURL: https://skinory.io/en/developers
+  tags:
+  - Inventories
+  properties:
+  - type: OpenAPI
+    url: openapi/skinory-inventories-api-openapi.yml
+- aid: skinory:skinory-inventory-api
+  name: Skinory (submitted as g2push) Inventory API
+  description: The Inventory API from Skinory (submitted as g2push) — 1 operation(s) for inventory.
+  humanURL: https://skinory.io/en/developers
+  tags:
+  - Inventory
+  properties:
+  - type: OpenAPI
+    url: openapi/skinory-inventory-api-openapi.yml
+x-submission-notes: 'CS2/CS:GO skins reference with a public read-only JSON API: live prices, price history, Steam inventory valuation, pro teams;
+  OpenAPI 3.1 at /api/openapi.json; CORS open. Submitted under the name g2push; the product and domain are Skinory.'
+
 x-submission-probe: '2026-09-28: root 200, invented 404, llms 200, openapi 200, developers 200'
+
 x-submitted-by: euthanasion@gmail.com (apis.io/add, 2026-09-28)
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 18
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

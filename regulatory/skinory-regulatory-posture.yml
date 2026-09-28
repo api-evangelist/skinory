@@ -1,0 +1,25 @@
+generated: '2026-09-28'
+method: probed
+source: https://skinory.io/en/privacy
+signals:
+  data_subject_request:
+    - evidence:
+        - source: https://skinory.io/en/privacy
+          http_status: 200
+          fetched: true
+          quote: "To delete your account and all related data, email info@skinory.io — we will remove it within 7 days."
+      note: Users can request deletion of their personal data via email, with a promised 7‑day removal period.
+  data_retention:
+    - evidence:
+        - source: https://skinory.io/en/privacy
+          http_status: 200
+          fetched: true
+          quote: "Value snapshots live 400 days, per-item history is deleted 30 days after tracking is switched off, and leaderboard rows without tracking or a public page are cleaned after 180 days."
+      note: Specifies retention periods for stored valuation data and leaderboard entries.
+  incident_notification:
+    - evidence:
+        - source: https://skinory.io/en/privacy
+          http_status: 200
+          fetched: true
+          quote: "When enabled, the analytics and monitoring services listed in the cookie policy receive usage and technical data."
+      note: No explicit breach notification clause found; only mentions analytics data handling.
