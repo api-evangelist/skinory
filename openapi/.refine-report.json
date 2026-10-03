@@ -1,24 +1,26 @@
 {
   "provider": "skinory",
   "sources": [
-    "skinory-openapi.json"
+    "_original/skinory-openapi.json"
   ],
   "outputs": [
     "skinory-inventories-api-openapi.yml",
     "skinory-inventory-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/skinory-openapi.json"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "skinory-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "skinory-openapi.json: tagged paths GET /api/v1/inventory -> Inventory",
     "skinory-openapi.json: tagged paths GET /api/v1/inventories -> Inventories",
     "skinory-openapi.json: declared missing tag: Inventories",
     "skinory-openapi.json: declared missing tag: Inventory",
-    "apis.yml register: written (+2 apis, 2 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "skinory-inventories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "skinory-inventory-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
