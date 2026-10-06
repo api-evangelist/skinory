@@ -23,7 +23,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-28'
 
-modified: '2026-09-28'
+modified: '2026-10-06'
 
 tags:
 - Company
@@ -46,6 +46,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://skinory.io/feed-en.xml
+  type: BlogRSS
 - type: AgenticAccess
   url: agentic-access/skinory-agentic-access.yml
 - type: Spectral
